@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="722.0" style="-fx-background-color: #FF7700;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdatest.LoginController">
+   <left>
+      <AnchorPane prefHeight="427.0" prefWidth="361.0" style="-fx-background-color: #383838;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="345.0" fitWidth="370.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="516.0" prefWidth="364.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="87.0" layoutY="129.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="228.0" text="Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userName" layoutX="89.0" layoutY="170.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="89.0" layoutY="267.0" promptText="Password" />
+            <Button fx:id="button" layoutX="126.0" layoutY="384.0" mnemonicParsing="false" onAction="#userLogIn" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #fff;" text="Log In" />
+            <Label fx:id="wrongLogIn" layoutX="153.0" layoutY="127.0" textFill="RED" />
+            <Hyperlink fx:id="guestlink" layoutX="112.0" layoutY="437.0" onAction="#rdGuestDashboard" text="Use as Guest?" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Hyperlink>
+            <RadioButton fx:id="radiobtnadmincheck"  layoutX="89.0" layoutY="322.0" mnemonicParsing="false" text="Administrator">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="4.0" layoutY="25.0" prefHeight="66.0" prefWidth="341.0" text="             SIGN IN" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

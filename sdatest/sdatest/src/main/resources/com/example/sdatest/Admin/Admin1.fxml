@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.FXCollections?>
+
+<StackPane fx:id="mainPane" prefHeight="623.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdatest.AdminController">
+        <children>
+            <VBox prefHeight="547.0" prefWidth="713.0">
+                <children>
+                    <HBox alignment="CENTER" prefHeight="313.0" prefWidth="780.0" style="-fx-background-color: #009EC4;" VBox.vgrow="ALWAYS">
+                        <children>
+                            <HBox alignment="TOP_RIGHT" prefHeight="315.0" prefWidth="780.0" HBox.hgrow="ALWAYS">
+                                <children>
+                                    <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="59.0" prefWidth="780.0" HBox.hgrow="ALWAYS">
+                                        <children>
+                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Barqa Housing Society" wrappingWidth="336.017578125">
+                                                <font>
+                                                    <Font name="Berlin Sans FB" size="35.0" />
+                                                </font>
+                                            </Text>
+                                            
+                                        </children>
+                                    </VBox>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" prefHeight="59.0" prefWidth="319.0">
+                           <children>
+                              <Button fx:id="Logout" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                           </children>
+                        </VBox>
+                                </children>
+                            </HBox>
+                        </children>
+                    </HBox>
+                    <HBox prefHeight="507.0" prefWidth="780.0" style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS" />
+                </children>
+            </VBox>
+            <VBox fx:id="detailsPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="476.0" prefWidth="716.0" style="-fx-background-color: #fff;">
+                <StackPane.margin>
+
+                </StackPane.margin>
+                <effect>
+                    <DropShadow height="5.0" radius="2.0" width="5.0" />
+                </effect>
+         <children>
+            <TabPane prefHeight="467.0" prefWidth="723.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Add Property">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="698.0">
+                           <children>
+                              <VBox layoutX="151.0" layoutY="22.0" prefHeight="359.0" prefWidth="403.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="148.0" text="Choose Society:" textFill="#006581" />
+                                          <ChoiceBox fx:id="role1" prefHeight="25.0" prefWidth="106.0">
+                                           <items>
+                                               <FXCollections fx:factory="observableArrayList">
+
+                                                   <String fx:id="society" fx:value="Barka Society" />
+
+
+                                               </FXCollections>
+                                           </items>
+                                       </ChoiceBox>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                          <Button fx:id="viewSocietyDetails1" onAction="#handleLoginBtn" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="32.0" prefWidth="357.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="Enter Block Number :" textFill="#006581" />
+                                          <TextField fx:id="bkNo" prefHeight="25.0" prefWidth="120.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="136.0" text="Choose House Type:" textFill="#006581" />
+                                          <ChoiceBox fx:id="houseType" prefHeight="25.0" prefWidth="106.0">
+                                              <items>
+                                                  <FXCollections fx:factory="observableArrayList">
+
+                                                      <String fx:id="1bk" fx:value="1bk" />
+                                                      <String fx:id="2bk" fx:value="2bk" />
+                                                      <String fx:id="3bk" fx:value="2bk" />
+
+                                                  </FXCollections>
+                                              </items>
+                                          </ChoiceBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="30.0" prefWidth="403.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="138.0" text="Description :" textFill="#006581" />
+                                          <TextField fx:id="descriptionHouse" prefHeight="25.0" prefWidth="120.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="93.0" prefWidth="403.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="83.0" text="Details :" textFill="#006581" />
+                                          <VBox alignment="CENTER" prefHeight="87.0" prefWidth="193.0">
+                                             <children>
+                                                <HBox prefHeight="25.0" prefWidth="193.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="84.0" text="Total Houses  :" textFill="#006581" />
+                                                      <Label fx:id="totalHouses" prefHeight="17.0" prefWidth="82.0" text="5" textFill="#006581" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="25.0" prefWidth="193.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="113.0" text="Allocated Houses:" textFill="#006581" />
+                                                      <Label fx:id="allocatedHouses" prefHeight="17.0" prefWidth="82.0" text="0" textFill="#006581" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="25.0" prefWidth="193.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="112.0" text="Remaining Houses   :" textFill="#006581" />
+                                                      <Label fx:id="remainingHouses" prefHeight="17.0" prefWidth="82.0" text="5" textFill="#006581" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="25.0" prefWidth="193.0">
+                                                   <children>
+                                                      <Label prefHeight="17.0" prefWidth="82.0" textFill="#006581" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="addHouse1" onAction="#handleAddHouse" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Add" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Label fx:id="confirmationHouseAdd" prefHeight="17.0" prefWidth="113.0" textFill="#006581">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="View Houses">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="157.0" layoutY="28.0" prefHeight="359.0" prefWidth="403.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="148.0" text="Choose Society:" textFill="#006581" />
+                                          <ChoiceBox fx:id="role" prefHeight="25.0" prefWidth="106.0" />
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                          <Button fx:id="viewSocietyDetails" onAction="#handleSocietyDetails" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="TableHouses" onSort="#handleHouses" prefHeight="53.0" prefWidth="528.0">
+                                            <columns>
+                                              <TableColumn fx:id="hrSR" prefWidth="75.0" text="sr#" />
+                                              <TableColumn fx:id="HouseBlock" prefWidth="75.0" text="Block#" />
+                                                <TableColumn fx:id="Htype" prefWidth="75.0" text="House Type" />
+                                                <TableColumn fx:id="DescHouse" prefWidth="75.0" text="Description" />
+                                            </columns>
+                                          </TableView>
+                                          <Label prefHeight="17.0" prefWidth="113.0" textFill="#006581">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="237.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="148.0" text="Choose House Sr#:" textFill="#006581" />
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                                <TextField fx:id="deleteHouseSr" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="addHouse" onAction="#handleHouseDel" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Delete" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Allocate House">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="722.0">
+                           <children>
+                              <VBox layoutX="133.0" layoutY="28.0" prefHeight="290.0" prefWidth="403.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="148.0" text="Choose Society:" textFill="#006581" />
+                                          <ChoiceBox fx:id="role2" prefHeight="25.0" prefWidth="106.0" />
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                          <Button fx:id="viewSocietyDetails2" onAction="#handleSocietyDetails1" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="TableHouses1" onSort="#handleHouses1" prefHeight="262.0" prefWidth="517.0">
+                                             <columns>
+                                                <TableColumn fx:id="hrSR1" prefWidth="75.0" text="sr#" />
+                                                <TableColumn fx:id="HouseBlock1" prefWidth="75.0" text="Block#" />
+                                                <TableColumn fx:id="Htype1" prefWidth="75.0" text="House Type" />
+                                                <TableColumn fx:id="DescHouse1" prefWidth="178.0" text="Description" />
+                                             </columns>
+                                          </TableView>
+                                          <Label prefHeight="17.0" prefWidth="113.0" textFill="#006581">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="houseAlot" layoutX="368.0" layoutY="403.0" onAction="#handleHouseAlot" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #006581;" text="Allocate House" textFill="WHITE" />
+                              <Label layoutX="33.0" layoutY="333.0" prefHeight="20.0" prefWidth="77.0" text="First Name:" textFill="#006581">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="367.0" prefHeight="20.0" prefWidth="70.0" text="Last Name:" textFill="#006581">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="513.0" layoutY="333.0" prefHeight="20.0" prefWidth="39.0" text="CNIC:" textFill="#006581">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="326.0" layoutY="333.0" prefHeight="20.0" prefWidth="42.0" text="Email:" textFill="#006581">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="302.0" layoutY="367.0" prefHeight="20.0" prefWidth="65.0" text="Password:" textFill="#006581">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="fnameAlot" layoutX="121.0" layoutY="331.0" prefHeight="25.0" prefWidth="127.0" />
+                              <TextField fx:id="LnameAlot" layoutX="121.0" layoutY="364.0" prefHeight="25.0" prefWidth="127.0" />
+                              <TextField fx:id="emailAlot" layoutX="368.0" layoutY="331.0" prefHeight="25.0" prefWidth="127.0" />
+                              <TextField fx:id="passAlot" layoutX="368.0" layoutY="364.0" prefHeight="25.0" prefWidth="127.0" />
+                              <TextField fx:id="cnicAlot" layoutX="562.0" layoutY="331.0" prefHeight="25.0" prefWidth="127.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="View Members">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="121.0" layoutY="38.0" prefHeight="290.0" prefWidth="403.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                          <Button fx:id="viewMembers" onAction="#viewMembers1" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="memberHouses" onSort="#handleHouses1" prefHeight="262.0" prefWidth="517.0">
+                                             <columns>
+
+                                                <TableColumn fx:id="nameMem" prefWidth="94.0" text="Name" />
+                                                <TableColumn fx:id="emailMem" prefWidth="109.0" text="email" />
+                                                <TableColumn fx:id="cnicMem" prefWidth="125.0" text="CNIC" />
+                                             </columns>
+                                          </TableView>
+                                          <Label prefHeight="17.0" prefWidth="113.0" textFill="#006581">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="View Complains">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="127.0" layoutY="14.0" prefHeight="359.0" prefWidth="463.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="viewComps" onAction="#viewComps2" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="tableComplain" prefHeight="53.0" prefWidth="528.0">
+                                             <columns>
+                                                <TableColumn fx:id="complainId" prefWidth="75.0" text="id" />
+                                                <TableColumn fx:id="compType" prefWidth="75.0" text="type" />
+
+                                                <TableColumn fx:id="compStatus" prefWidth="108.0" text="Status" />
+                                                <TableColumn fx:id="compHno" prefWidth="129.0" text="House No" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="237.0">
+                                             <children>
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="approveComp" layoutY="4.0" onAction="#approveComp" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: #006581;" text="Solved" textFill="WHITE" />
+
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Etag Applications">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="127.0" layoutY="14.0" prefHeight="359.0" prefWidth="463.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="viewEtag" onAction="#viewEtag" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="TableEtag" onSort="#handleEtag" prefHeight="53.0" prefWidth="528.0">
+                                             <columns>
+                                                <TableColumn fx:id="appNoEtag" prefWidth="75.0" text="app#" />
+                                                <TableColumn fx:id="vehNo" prefWidth="75.0" text="VehicleNo" />
+                                                <TableColumn fx:id="vType" prefWidth="75.0" text="VehicleType" />
+                                                <TableColumn fx:id="applicantNameEtag" prefWidth="108.0" text="Applicant Name" />
+                                                <TableColumn fx:id="dateVehicle" prefWidth="108.0" text="Date" />
+                                             </columns>
+                                          </TableView>
+                                          <Label prefHeight="17.0" prefWidth="113.0" textFill="#006581">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="237.0">
+                                             <children>
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="approveEtag" layoutY="4.0" onAction="#approveEtag" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: #006581;" text="Approve" textFill="WHITE" />
+                                                <Button fx:id="rejEtag" layoutX="115.0" layoutY="4.0" onAction="#rejEtag" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Reject" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Transfer Applications">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="139.0" layoutY="14.0" prefHeight="359.0" prefWidth="463.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="viewtransfer" onAction="#viewtransfer" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="tableTransfer" prefHeight="53.0" prefWidth="528.0">
+                                             <columns>
+                                                <TableColumn fx:id="transferId" prefWidth="75.0" text="id" />
+                                                <TableColumn fx:id="transferNewOwner" prefWidth="105.0" text="NewOwnerID" />
+                                                <TableColumn fx:id="TransferOldOwnerID" prefWidth="75.0" text="ownerID" />
+                                                <TableColumn fx:id="transferStatus" prefWidth="78.0" text="Status" />
+                                                <TableColumn fx:id="transferHno" prefWidth="108.0" text="House No" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="68.0">
+                                             <children>
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="17.0" prefWidth="126.0" text="Set New Password:" textFill="#006581" />
+                                          <TextField fx:id="transferPassword" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="approveTransfer" layoutY="4.0" onAction="#approveTran" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: #006581;" text="Approve" textFill="WHITE" />
+                                                <Button fx:id="rejtransfers" layoutX="115.0" layoutY="4.0" onAction="#rejtransfers" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Reject" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Rent Applications">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="127.0" layoutY="26.0" prefHeight="359.0" prefWidth="463.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <Button fx:id="viewRent" onAction="#viewEtag" prefHeight="23.0" prefWidth="57.0" text="view" textFill="#006581">
+                                             <font>
+                                                <Font size="9.0" />
+                                             </font>
+                                          </Button>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="tableRent" prefHeight="53.0" prefWidth="528.0">
+                                             <columns>
+                                                <TableColumn fx:id="rentId" prefWidth="75.0" text="id" />
+                                                <TableColumn fx:id="rentnewRenterId" prefWidth="105.0" text="NewRenterD" />
+                                                <TableColumn fx:id="rentOwnerID" prefWidth="75.0" text="ownerID" />
+                                                <TableColumn fx:id="rentStatus" prefWidth="78.0" text="Status" />
+                                                <TableColumn fx:id="rentHno" prefWidth="108.0" text="House No" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="68.0">
+                                             <children>
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="17.0" prefWidth="126.0" text="Set New Password:" textFill="#006581" />
+                                          <TextField fx:id="deleteHouseSr11" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="approverent" layoutY="4.0" onAction="#approveRent" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: #006581;" text="Approve" textFill="WHITE" />
+                                                <Button fx:id="rejRent" layoutX="115.0" layoutY="4.0" onAction="#rejRent" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Reject" textFill="WHITE" />
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Make Annoucements">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="149.0" layoutY="20.0" prefHeight="359.0" prefWidth="463.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="463.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="133.0" text="New Annoucement:" textFill="#006581" />
+                                          <TextField fx:id="annoucementdescription" />
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox prefHeight="42.0" prefWidth="25.0" />
+                                          <Button fx:id="postAnnoucement" onAction="#postAnnoucement" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #006581;" text="Post Annoucement" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="249.0" prefWidth="403.0">
+                                       <children>
+                                          <TableView fx:id="tableAnnoucement" prefHeight="53.0" prefWidth="528.0">
+                                             <columns>
+                                                <TableColumn fx:id="annoucementDate" prefWidth="75.0" text="Date" />
+                                                <TableColumn fx:id="AnnoucementDate" prefWidth="387.0" text="Annoucement" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="68.0">
+                                             <children>
+                                                <HBox prefHeight="42.0" prefWidth="25.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="53.0" prefWidth="357.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+            </VBox>
+            <HBox fx:id="loaderPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="152.0" spacing="10.0" style="-fx-background-color: #fff;" visible="false">
+                <children>
+
+                                                        <Label prefHeight="61.0" prefWidth="77.0" text="Redirecting... please wait..." wrapText="true" />
+                </children>
+                <effect>
+                    <DropShadow height="5.0" radius="2.0" width="5.0" />
+                </effect>
+            </HBox>
+        </children>
+    </StackPane>

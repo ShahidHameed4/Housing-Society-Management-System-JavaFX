@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<StackPane fx:id="mainPane" prefHeight="623.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdatest.SignUpController">
+    <children>
+        <VBox prefHeight="547.0" prefWidth="713.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="313.0" prefWidth="780.0" style="-fx-background-color: #009EC4;" VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="315.0" prefWidth="780.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="158.0" prefWidth="780.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Barqa Housing Society" wrappingWidth="508.017578125">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="35.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets top="30.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+                                            <font>
+                                                <Font name="Bauhaus 93" size="40.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="481.0" prefWidth="713.0" style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+        <VBox fx:id="detailsPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="657.0" style="-fx-background-color: #fff;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="101.0" prefWidth="657.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="85.0" prefWidth="83.0" style="-fx-background-color: #006580; -fx-background-radius: 50;">
+                            <HBox.margin>
+
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER" prefHeight="32.0" prefWidth="657.0">
+               <children>
+                  <Label text="Role: New User " textFill="#006581">
+                     <font>
+                        <Font name="Bauhaus 93" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+                <VBox alignment="TOP_CENTER" prefHeight="254.0" prefWidth="657.0">
+                    <children>
+                        <HBox>
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                                <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_user_50px.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <TextField fx:id="usernameField" onKeyPressed="#handleKeyPressed" prefHeight="30.0" prefWidth="205.0" promptText="Username">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                                <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_user_64px.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <TextField fx:id="firstNameField" onKeyPressed="#handleKeyPressed" prefHeight="30.0" prefWidth="205.0" promptText="Firstname">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                    <Label prefHeight="28.0" prefWidth="42.0">
+                                       <graphic>
+                                                      <ImageView fitHeight="34.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                                          <image>
+                                                              <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_secured_letter_50px.png" />
+                                                          </image>
+                                                      </ImageView>
+                                       </graphic>
+                                    </Label>
+                                                <TextField prefHeight="25.0" prefWidth="199.0" />
+
+
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                                <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_lock_52px.png" />
+                                                    </image>
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <PasswordField fx:id="passwordTextField" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="205.0" promptText="Password">
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </PasswordField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                                <ImageView fitHeight="39.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_user_64px.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <TextField fx:id="lastNameField" onKeyPressed="#handleKeyPressed" prefHeight="30.0" prefWidth="205.0" promptText="Lastname">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                                            <children>
+                                                <ImageView fitHeight="36.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../../../../../Downloads/javafx_school_management_system-master/javafx_school_management_system-master/src/schoolmanagement/resource/image/icons8_phone_26px.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <TextField fx:id="mobileNoField" onKeyPressed="#handleKeyPressed" prefHeight="30.0" prefWidth="205.0" promptText="Mobile Number">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                    <HBox.margin>
+
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="69.0" prefWidth="374.0">
+                            <children>
+                                <Button fx:id="signUpBtn" onAction="#handleSignUpBtn" prefHeight="36.0" prefWidth="85.0" style="-fx-background-color: #006581;" text="Signin" textFill="WHITE">
+                                    <HBox.margin>
+
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="657.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Already have account ?" wrappingWidth="140.103515625">
+                            <HBox.margin>
+
+                            </HBox.margin>
+                        </Text>
+                        <Button fx:id="loginBtn" onAction="#handleLoginBtn" prefHeight="29.0" prefWidth="62.0" text="Login" textFill="#006581">
+                            <HBox.margin>
+
+                            </HBox.margin>
+                            <font>
+                                <Font size="9.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <StackPane.margin>
+
+            </StackPane.margin>
+            <effect>
+                <DropShadow height="5.0" radius="2.0" width="5.0" />
+            </effect>
+        </VBox>
+        <HBox fx:id="loaderPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="152.0" spacing="10.0" style="-fx-background-color: #fff;" visible="false">
+            <children>
+
+                <Label prefHeight="61.0" prefWidth="77.0" text="Redirecting... please wait..." wrapText="true" />
+            </children>
+            <effect>
+                <DropShadow height="5.0" radius="2.0" width="5.0" />
+            </effect>
+        </HBox>
+    </children>
+</StackPane>

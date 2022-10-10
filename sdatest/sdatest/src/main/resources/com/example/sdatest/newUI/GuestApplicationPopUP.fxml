@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="597.0" style="-fx-background-color: #383838;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sdatest.popUPcontroller">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="65.0" prefWidth="944.0" style="-fx-background-color: #FF7700;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+        <Label layoutX="51.0" layoutY="91.0" prefHeight="34.0" prefWidth="414.0" text="Your Application is Submitted" textFill="WHITE">
+            <font>
+                <Font name="Impact" size="27.0" />
+            </font>
+        </Label>
+        <Label fx:id="applicationIDLabel" layoutX="297.0" layoutY="154.0" prefHeight="34.0" prefWidth="209.0" text=" " textAlignment="RIGHT" textFill="WHITE">
+            <font>
+                <Font name="Impact" size="27.0" />
+            </font>
+        </Label>
+        <Label layoutX="51.0" layoutY="154.0" prefHeight="34.0" prefWidth="233.0" text="Your Appliction ID is:" textFill="WHITE">
+            <font>
+                <Font name="Impact" size="27.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
